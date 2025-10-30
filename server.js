@@ -11,7 +11,7 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: ["http://localhost:5173", "https://your-frontend-domain.vercel.app"],
+  origin: ["http://localhost:5173", "https://bookit-client-rupak-das-projects.vercel.app/"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
