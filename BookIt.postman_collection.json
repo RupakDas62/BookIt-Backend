@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "b20a1605-969c-412c-9c1c-e0e1445f4644",
+		"name": "BookIt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34266241"
+	},
+	"item": [
+		{
+			"name": "Get all experiences",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/experiences",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"experiences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Experience By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/experiences/6903153506ef67d65b71b42f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"experiences",
+						"6903153506ef67d65b71b42f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Experience",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Paragliding in Bir Billing\",\r\n  \"location\": \"Bir Billing, Himachal Pradesh, India\",\r\n  \"description\": \"Soar through the skies above the scenic Bir Valley. Certified pilots ensure safety and an unforgettable view of the Himalayas.\",\r\n  \"price\": 7499,\r\n  \"image\": \"https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0\",\r\n  \"slots\": [\r\n    { \"date\": \"2025-11-18\", \"time\": \"10:00 AM\", \"capacity\": 10, \"booked\": 0 },\r\n    { \"date\": \"2025-11-19\", \"time\": \"2:00 PM\", \"capacity\": 10, \"booked\": 0 }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/experiences",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"experiences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Rupak Das\",\r\n  \"email\": \"rupak@example.com\",\r\n  \"experienceId\": \"6903153506ef67d65b71b42f\",\r\n  \"slot\": {\r\n    \"date\": \"2025-11-18\",\r\n    \"time\": \"10:00 AM\"\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate Promo Code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"code\": \"SAVE10\" }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/promo/validate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"promo",
+						"validate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Promo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"SAVE10\",\r\n  \"discountType\": \"percent\",\r\n  \"value\": 10,\r\n  \"active\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/promo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"promo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deployment Test",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
