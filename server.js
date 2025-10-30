@@ -14,7 +14,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",         // dev
-      "https://bookit-client-rupak-das-projects.vercel.app/", // your deployed frontend
+      "https://bookit-client-rupak-das-projects.vercel.app", // your deployed frontend
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
